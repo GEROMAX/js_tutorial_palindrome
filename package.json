@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/GEROMAX/js_tutorial_palindrome/issues"
   },
-  "homepage": "https://github.com/GEROMAX/js_tutorial_palindrome#readme"
+  "homepage": "https://github.com/GEROMAX/js_tutorial_palindrome#readme",
+  "directories": {
+    "test": "test"
+  }
 }
