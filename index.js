@@ -1,14 +1,11 @@
+module.exports = Phrase;
+
 // Adds `reverse` to all strings.
 String.prototype.reverse = function() {
   return Array.from(this)
     .reverse()
     .join("");
 };
-// const reverseString = str => {
-//   return Array.from(str)
-//     .reverse()
-//     .join("");
-// };
 
 // practice
 String.prototype.isBlank = function() {
@@ -27,12 +24,20 @@ function Phrase(content) {
   this.lowerStr = function lowerStr(str) {
     return str.toLowerCase();
   };
+
   this.lowerText = function lowerText() {
-    return this.lowerStr(this.content);
+    return this.lowerStr(this.letters());
   };
+
+  // Returns the letters in the content.
+  this.letters = function letters() {
+    return Array.from(this.content).filter(char => char.match(/\w/)).join("");
+  };
+
   this.palindrome = function palindrome() {
     return this.lowerText() === this.lowerText().reverse();
   };
+
   this.louder = function louder() {
     return this.content.toUpperCase();
   };
