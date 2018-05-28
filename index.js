@@ -31,6 +31,7 @@ function Phrase(content) {
 
   // Returns the letters in the content.
   this.letters = function letters() {
+    // reduceでもできるが、filterのほうがシンプルか
     return Array.from(this.content).filter(char => char.match(/\w/)).join("");
   };
 
