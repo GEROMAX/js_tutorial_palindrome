@@ -36,7 +36,7 @@ function Phrase(content) {
   };
 
   this.palindrome = function palindrome() {
-    return this.lowerText().isBlank ? false : this.lowerText() === this.lowerText().reverse();
+    return this.lowerText().isBlank() ? false : this.lowerText() === this.lowerText().reverse();
   };
 
   this.louder = function louder() {
