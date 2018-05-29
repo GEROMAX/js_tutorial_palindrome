@@ -32,7 +32,7 @@ function Phrase(content) {
   // Returns the letters in the content.
   this.letters = function letters() {
     // reduceでもできるが、filterのほうがシンプルか
-    return Array.from(this.content).filter(char => char.match(/\w/)).join("");
+    return Array.from(this.content).filter(char => char.match(/(\w|[^\x01-\x7E\xA1-\xDF^！”＃＄％＆’（）＝～｜‘｛＋＊｝＜＞？＿－＾￥＠「；：」、。・])/)).join("");
   };
 
   this.palindrome = function palindrome() {

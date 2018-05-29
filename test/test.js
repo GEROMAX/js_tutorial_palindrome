@@ -27,6 +27,26 @@ describe("Phrase", function() {
       let emptyPhrase = new Phrase("");
       assert(!emptyPhrase.palindrome());
     });
+
+    it("should return true for a hiragana", function() {
+      let hiraganaPhrase = new Phrase("とまと");
+      assert(hiraganaPhrase.palindrome());
+    });
+
+    it("should return true for a katanaka", function() {
+      let katakanaPhrase = new Phrase("トマト");
+      assert(katakanaPhrase.palindrome());
+    });
+
+    it("should return true for a kanji", function() {
+      let kanjiPhrase = new Phrase("山本山");
+      assert(kanjiPhrase.palindrome());
+    });
+
+    it("should return true for a mixed-case 2byte", function() {
+      let twobytePhrase = new Phrase("あア、「亜」アあ。");
+      assert(twobytePhrase.palindrome());
+    });
   });
 
   describe("#letters", function() {
