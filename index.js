@@ -18,7 +18,7 @@ Array.prototype.last = function() {
 // Defines a Phrase object.
 function Phrase(content) {
   //property
-  this.content = content;
+  this.content = (content == null) ? "" : content;
 
   //function
   this.lowerStr = function lowerStr(str) {

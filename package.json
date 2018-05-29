@@ -1,6 +1,6 @@
 {
   "name": "js_tutorial_palindrome",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "find palindrome",
   "main": "index.js",
   "scripts": {

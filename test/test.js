@@ -47,6 +47,12 @@ describe("Phrase", function() {
       let twobytePhrase = new Phrase("あア、「亜」アあ。");
       assert(twobytePhrase.palindrome());
     });
+
+    it("should return true for no param constructor", function() {
+      let emptyPhrase = new Phrase("");
+      let noParamPhrase = new Phrase();
+      assert(emptyPhrase.content === noParamPhrase.content);
+    });
   });
 
   describe("#letters", function() {
